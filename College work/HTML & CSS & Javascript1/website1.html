@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthy Diet Guide</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fff}
+.container{display:flex;min-height:100vh}
+.banner{position:relative;height:200px;background:green;color:#fff;text-align:center;padding:20px;overflow:hidden}
+.banner-content{position:relative;z-index:2}
+.banner h1{font-size:2.5em;margin-bottom:10px;text-shadow:2px 2px 4px rgba(0,0,0,0.3)}
+.banner p{font-size:1.2em;text-shadow:1px 1px 2px rgba(0,0,0,0.3)}
+.banner-image{position:absolute;top:0;right:0;height:100%;opacity:0.7;z-index:1;transition:0.5s}
+.banner-image.active{opacity:0.4}
+.left-nav{width:250px;background:#333;color:#fff;padding:20px 0}
+.nav-item{padding:15px 20px;cursor:pointer;border-bottom:1px solid #444;transition:0.3s}
+.nav-item:hover,.nav-item.active{background:green;font-weight:bold}
+.right-content{flex:1;padding:20px}
+.content-section{display:none}
+.content-section.active{display:block;animation:fadeIn 0.5s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+h2{color:#4CAF50;margin-bottom:15px;padding-bottom:5px;border-bottom:2px solid #4CAF50}
+h3{color:#2E7D32;margin:15px 0 10px}
+p{margin-bottom:15px;line-height:1.6}
+ul{margin:0 0 20px 25px}
+li{margin-bottom:8px;position:relative;padding-left:20px;line-height:1.5}
+li:before{content:"•";position:absolute;left:0;color:#4CAF50;font-weight:bold}
+a{color:#2E7D32;text-decoration:none;font-weight:bold}
+a:hover{text-decoration:underline}
+.anchor-links{margin:20px 0;padding:10px;background:#f5f5f5;border-left:4px solid #4CAF50}
+.anchor-links a{display:block;margin:5px 0}
+</style>
+</head>
+<body>
+<div class="banner">
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Balanced Diet" class="banner-image active" id="banner-balanced-diet">
+<div class="banner-content">
+<h1><a href="#" style="color:#fff;text-decoration:none">Healthy Diet Guide</a></h1>
+<p>Your complete resource for nutrition and healthy eating</p>
+</div>
+</div>
+
+<div class="container">
+<div class="left-nav">
+<div class="nav-item active" onclick="showSection('balanced-diet')">Balanced Diet</div>
+<div class="nav-item" onclick="showSection('weight-loss')">Weight Loss Tips</div>
+<div class="nav-item" onclick="showSection('superfoods')">Superfoods</div>
+<div class="nav-item" onclick="showSection('meal-plan')">Sample Meal Plan</div>
+<div class="nav-item" onclick="showSection('hydration')">Hydration</div>
+</div>
+
+<div class="right-content">
+<!-- Sections -->
+<div id="balanced-diet" class="content-section active">
+<h2>What is a Balanced Diet?</h2>
+<div class="anchor-links">
+<a href="#balanced-diet-intro">Introduction</a>
+<a href="#balanced-diet-components">Key Components</a>
+<a href="#balanced-diet-benefits">Benefits</a>
+</div>
+<h3 id="balanced-diet-intro">Introduction</h3>
+<p>A balanced diet provides your body with the nutrients it needs to function correctly.</p>
+<h3 id="balanced-diet-components">Key Components</h3>
+<p>Consume:</p>
+<ul>
+<li><a href="#fruits">Fresh fruits</a> and <a href="#vegetables">vegetables</a></li>
+<li><a href="#whole-grains">Whole grains</a></li>
+<li><a href="#lean-proteins">Lean proteins</a></li>
+<li><a href="#healthy-fats">Healthy fats</a></li>
+<li><a href="#dairy">Low-fat dairy</a></li>
+</ul>
+<h3 id="balanced-diet-benefits">Benefits</h3>
+<p>Eating balanced diet maintains or improves health and boosts energy.</p>
+</div>
+
+<div id="weight-loss" class="content-section">
+<h2>Healthy Weight Loss Tips</h2>
+<div class="anchor-links">
+<a href="#weight-loss-strategies">Strategies</a>
+<a href="#weight-loss-reminder">Reminder</a>
+</div>
+<h3 id="weight-loss-strategies">Effective Strategies</h3>
+<p>Healthy weight loss needs diet and lifestyle changes:</p>
+<ul>
+<li>Eat more <a href="#vegetables">vegetables</a> & <a href="#fruits">fruits</a></li>
+<li>Choose <a href="#whole-grains">whole grains</a></li>
+<li>Include <a href="#lean-proteins">protein</a></li>
+<li>Limit <a href="#sugars">sugars</a> and <a href="#saturated-fats">saturated fats</a></li>
+<li>Practice <a href="#portion-control">portion control</a></li>
+<li>Stay <a href="#physical-activity">active</a> and get <a href="#sleep">sleep</a></li>
+<li>Stay <a href="#hydration">hydrated</a></li>
+</ul>
+<h3 id="weight-loss-reminder">Reminder</h3>
+<p>Slow and steady weight loss is sustainable.</p>
+</div>
+
+<div id="superfoods" class="content-section">
+<h2>Nutritional Superfoods</h2>
+<div class="anchor-links">
+<a href="#superfoods-list">Superfoods List</a>
+</div>
+<h3 id="superfoods-list">Nutrient-Packed Foods</h3>
+<p>Boost your health with:</p>
+<ul>
+<li><strong><a href="#berries">Berries</a>:</strong> Antioxidants, fiber</li>
+<li><strong><a href="#leafy-greens">Leafy greens</a>:</strong> Vitamins & minerals</li>
+<li><strong><a href="#nuts-seeds">Nuts and seeds</a>:</strong> Healthy fats, protein</li>
+<li><strong><a href="#fatty-fish">Fatty fish</a>:</strong> Omega-3 fatty acids</li>
+<li><strong><a href="#whole-grains">Whole grains</a>:</strong> Fiber, B vitamins</li>
+<li><strong><a href="#legumes">Legumes</a>:</strong> Plant-based protein</li>
+<li><strong><a href="#greek-yogurt">Greek yogurt</a>:</strong> Protein, probiotics</li>
+</ul>
+</div>
+
+<div id="meal-plan" class="content-section">
+<h2>Sample Healthy Meal Plan</h2>
+<div class="anchor-links">
+<a href="#breakfast">Breakfast</a><a href="#morning-snack">Morning Snack</a><a href="#lunch">Lunch</a><a href="#afternoon-snack">Afternoon Snack</a><a href="#dinner">Dinner</a><a href="#evening-snack">Evening Snack</a>
+</div>
+<h3 id="breakfast">Breakfast:</h3>
+<ul><li>Oatmeal with berries and nuts, glass of low-fat milk</li></ul>
+<h3 id="morning-snack">Morning Snack:</h3>
+<ul><li>Apple with peanut butter</li></ul>
+<h3 id="lunch">Lunch:</h3>
+<ul><li>Grilled chicken salad, tomatoes, cucumber, olive oil dressing</li></ul>
+<h3 id="afternoon-snack">Afternoon Snack:</h3>
+<ul><li>Carrot & celery sticks with hummus</li></ul>
+<h3 id="dinner">Dinner:</h3>
+<ul><li>Baked salmon, quinoa, steamed broccoli</li></ul>
+<h3 id="evening-snack">Evening Snack:</h3>
+<ul><li>Handful of almonds</li></ul>
+</div>
+
+<div id="hydration" class="content-section">
+<h2>The Importance of Hydration</h2>
+<div class="anchor-links">
+<a href="#hydration-benefits">Benefits</a><a href="#water-amount">How Much Water?</a><a href="#hydration-tips">Tips</a>
+</div>
+<h3 id="hydration-benefits">Why Hydration Matters</h3>
+<p>Water regulates temperature, digestion, lubricates joints, transports nutrients, flushes waste, improves skin and supports weight management.</p>
+<h3 id="water-amount">Water Intake</h3>
+<p>About 8 glasses (2 liters) per day — varies by activity and climate.</p>
+<h3 id="hydration-tips">Tips:</h3>
+<ul>
+<li>Carry a bottle</li><li>Drink before meals</li><li>Choose water over sugary drinks</li><li>Eat water-rich foods</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<script>
+function showSection(id){
+document.querySelectorAll('.content-section').forEach(s=>s.classList.remove('active'));
+document.querySelector(`#${id}`).classList.add('active');
+document.querySelectorAll('.nav-item').forEach(i=>i.classList.remove('active'));
+document.querySelectorAll('.nav-item').forEach(i=>{if(i.onclick.toString().includes(id))i.classList.add('active')});
+document.querySelectorAll('.banner-image').forEach(img=>img.classList.remove('active'));
+document.getElementById(`banner-${id}`)?.classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
