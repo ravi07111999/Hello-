@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            min-width: 40px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .print-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    
+    <table id="numberTable">
+        <thead>
+            <tr>
+                <th>×</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>2</td>
+                <td>4</td>
+                <td>6</td>
+                <td>8</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>3</td>
+                <td>6</td>
+                <td>9</td>
+                <td>12</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>4</td>
+                <td>8</td>
+                <td>12</td>
+                <td>16</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td>5</td>
+                <td>10</td>
+                <td>15</td>
+                <td>20</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="print-button" onclick="window.print()">Print Table</button>
+
+    <script>
+       
+    </script>
+</body>
+</html>

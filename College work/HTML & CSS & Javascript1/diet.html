@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Diet Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        
+        .banner {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        
+        .left-nav {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .nav-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid #444;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-item:hover {
+            background-color: green;
+        }
+        
+        .nav-item.active {
+            background-color: green;
+            font-weight: bold;
+        }
+        
+        
+        .right-content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Healthy Diet Guide</h1>
+        <p>Your complete resource for nutrition and healthy eating</p>
+    </div>
+    
+    <div class="container">
+        <div class="left-nav">
+            <div class="nav-item active" onclick="showSection('balanced-diet')">Balanced Diet</div>
+            <div class="nav-item" onclick="showSection('weight-loss')">Weight Loss Tips</div>
+            <div class="nav-item" onclick="showSection('superfoods')">Superfoods</div>
+            <div class="nav-item" onclick="showSection('meal-plan')">Sample Meal Plan</div>
+            <div class="nav-item" onclick="showSection('hydration')">Hydration</div>
+        </div>
+        
+        <div class="right-content">
+            <div id="balanced-diet" class="content-section active">
+                <h2>What is a Balanced Diet?</h2>
+                <p>A balanced diet provides your body with the nutrients it needs to function correctly. To get the proper nutrition from your diet, you should consume:</p>
+                <ul>
+                    <li>Fresh fruits and vegetables</li>
+                    <li>Whole grains</li>
+                    <li>Lean proteins</li>
+                    <li>Healthy fats</li>
+                    <li>Low-fat dairy or dairy alternatives</li>
+                </ul>
+                <p>Eating a balanced diet helps maintain or improve overall health and can help you feel your best.</p>
+            </div>
+            
+            <div id="weight-loss" class="content-section">
+                <h2>Healthy Weight Loss Tips</h2>
+                <p>Losing weight in a healthy way involves both diet and lifestyle changes:</p>
+                <ul>
+                    <li>Eat more vegetables and fruits</li>
+                    <li>Choose whole grains over refined grains</li>
+                    <li>Include protein with every meal</li>
+                    <li>Limit added sugars and saturated fats</li>
+                    <li>Practice portion control</li>
+                    <li>Stay physically active</li>
+                    <li>Get enough sleep</li>
+                    <li>Stay hydrated</li>
+                </ul>
+                <p>Remember, slow and steady weight loss is more sustainable than rapid weight loss.</p>
+            </div>
+            
+            <div id="superfoods" class="content-section">
+                <h2>Nutritional Superfoods</h2>
+                <p>These nutrient-packed foods can boost your health:</p>
+                <ul>
+                    <li><strong>Berries:</strong> High in antioxidants and fiber</li>
+                    <li><strong>Leafy greens:</strong> Packed with vitamins A, C, K and minerals</li>
+                    <li><strong>Nuts and seeds:</strong> Good sources of healthy fats and protein</li>
+                    <li><strong>Fatty fish:</strong> Rich in omega-3 fatty acids</li>
+                    <li><strong>Whole grains:</strong> Provide fiber and B vitamins</li>
+                    <li><strong>Legumes:</strong> Excellent plant-based protein sources</li>
+                    <li><strong>Greek yogurt:</strong> High in protein and probiotics</li>
+                </ul>
+            </div>
+            
+            <div id="meal-plan" class="content-section">
+                <h2>Sample Healthy Meal Plan</h2>
+                <h3>Breakfast:</h3>
+                <p>Oatmeal with berries and nuts, plus a glass of low-fat milk</p>
+                
+                <h3>Mid-morning snack:</h3>
+                <p>An apple with a tablespoon of peanut butter</p>
+                
+                <h3>Lunch:</h3>
+                <p>Grilled chicken salad with mixed greens, cherry tomatoes, cucumber, and olive oil dressing</p>
+                
+                <h3>Afternoon snack:</h3>
+                <p>Carrot and celery sticks with hummus</p>
+                
+                <h3>Dinner:</h3>
+                <p>Baked salmon with quinoa and steamed broccoli</p>
+                
+                <h3>Evening snack (optional):</h3>
+                <p>A small handful of almonds</p>
+            </div>
+            
+            <div id="hydration" class="content-section">
+                <h2>The Importance of Hydration</h2>
+                <p>Water is essential for nearly every function in your body:</p>
+                <ul>
+                    <li>Helps regulate body temperature</li>
+                    <li>Aids digestion and prevents constipation</li>
+                    <li>Lubricates joints</li>
+                    <li>Helps transport nutrients</li>
+                    <li>Flushes out waste products</li>
+                    <li>Improves skin health</li>
+                    <li>Can help with weight management</li>
+                </ul>
+                <p><strong>How much water should you drink?</strong> A general guideline is about 8 glasses (2 liters) per day, but needs vary based on activity level, climate, and other factors.</p>
+                <p>Tips to stay hydrated:</p>
+                <ul>
+                    <li>Carry a water bottle with you</li>
+                    <li>Drink water before meals</li>
+                    <li>Choose water over sugary drinks</li>
+                    <li>Eat water-rich foods like fruits and vegetables</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            
+            document.getElementById(sectionId).classList.add('active');
+            
+            
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            
+            navItems.forEach(item => {
+                if (item.getAttribute('onclick').includes(sectionId)) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
